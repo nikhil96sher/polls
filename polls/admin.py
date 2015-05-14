@@ -4,7 +4,7 @@ from polls.models import Choice
 # Register your models here.
 class ChoiceInline(admin.TabularInline):
 	model = Choice
-	extra=2
+	
 class Questionadmin(admin.ModelAdmin):
 	list_display=('question_text','pub_date')
 	inlines=[ChoiceInline]
